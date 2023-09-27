@@ -1,9 +1,22 @@
-﻿
-@* <ul class="nav nav-pills todo-nav">
-    <li role="presentation" title="Display all tasks." class="nav-item all-task active"><a href="#" class="nav-link">All</a></li>
-    <li role="presentation" title="Display active tasks only." class="nav-item active-task"><a href="#" class="nav-link">Active</a></li>
-    <li role="presentation" title="Display completed tasks only." class="nav-item completed-task"><a href="#" class="nav-link">Completed</a></li>
-</ul> *@
+﻿@using TodoApp.Enums;
+
+<ul class="nav nav-pills todo-nav">
+    <li role="presentation" title="Display all tasks." class="nav-item all-task active">
+        <button type="button" class="nav-link" @onclick="@( async () => await FilterTasksAsync())">
+            All
+        </button>
+    </li>
+    <li role="presentation" title="Display active tasks only." class="nav-item active-task">
+        <button type="button" class="nav-link" @onclick="@( async () => await FilterTasksAsync(TaskState.Active.ToString()))">
+            Active
+        </button>
+    </li>
+    <li role="presentation" title="Display completed tasks only." class="nav-item completed-task">
+        <button type="button" class="nav-link" @onclick="@( async () => await FilterTasksAsync(TaskState.Completed.ToString()))">
+            Completed
+        </button>
+    </li>
+</ul>
 
 <div class="todo-list">
     @if (tasks is null)

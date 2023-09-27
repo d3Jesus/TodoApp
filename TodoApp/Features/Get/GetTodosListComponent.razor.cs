@@ -14,9 +14,12 @@ namespace TodoApp.Features.Get
 
         private IEnumerable<TodoResponse>? tasks { get; set; }
 
-        protected override async Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync() 
+            => await FilterTasksAsync();
+
+        async Task FilterTasksAsync(string state = "")
         {
-            var query = new GetTodos.Query();
+            var query = new GetTodos.Query() { TaskState = state };
             tasks = await Sender!.Send(query);
         }
 
