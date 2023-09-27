@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Components;
-using TodoApp.Models;
 
 namespace TodoApp.Features.Get
 {
@@ -9,7 +8,7 @@ namespace TodoApp.Features.Get
         [Inject]
         private ISender? Sender { get; set; }
 
-        private IEnumerable<TodoItem> tasks { get; set; }
+        private IEnumerable<TodoResponse>? tasks { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
