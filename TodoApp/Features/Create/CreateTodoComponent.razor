@@ -1,0 +1,10 @@
+﻿<EditForm Model="request" OnValidSubmit="HandleSubmitAsync">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 col-sm-10">
+            <InputText class="form-control add-task" placeholder="New Task..." @bind-Value="@request.Title" />
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-2">
+            <button type="submit" title="Create Task" class="btn btn-outline-primary">Add</button>
+        </div>
+    </div>
+</EditForm>
