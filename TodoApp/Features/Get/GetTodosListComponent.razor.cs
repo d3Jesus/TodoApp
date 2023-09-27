@@ -1,10 +1,13 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Components;
+using TodoApp.Features.ChangeState;
 
 namespace TodoApp.Features.Get
 {
     public partial class GetTodosListComponent
     {
+        [Inject]
+        private NavigationManager? NavigationManager { get; set; }
         [Inject]
         private ISender? Sender { get; set; }
 
@@ -14,6 +17,13 @@ namespace TodoApp.Features.Get
         {
             var query = new GetTodos.Query();
             tasks = await Sender!.Send(query);
+        }
+
+        async Task ChangeTaskStateAsync(int taskId)
+        {
+            var command = new ChangeTaskState.Command() { TaskId = taskId };
+            await Sender!.Send(command);
+            NavigationManager!.NavigateTo("/", true);
         }
     }
 }
