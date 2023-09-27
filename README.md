@@ -15,13 +15,13 @@ was not made and does not have many functionalities.
 
 ## Overview
 ### All Tasks
-![All](https://github.com/d3Jesus/TodoApp/blob/master/wwwroot/assets/All.png)
+![All](https://github.com/d3Jesus/TodoApp/blob/master/TodoApp/wwwroot/assets/All.png)
 
 ### Active Tasks
-![All]()
+![Active](https://github.com/d3Jesus/TodoApp/blob/master/TodoApp/wwwroot/assets/Active.png)
 
 ### Completed Tasks
-![All]()
+![Completed](https://github.com/d3Jesus/TodoApp/blob/master/TodoApp/wwwroot/assets/Completed.png)
 
 ## Database
 As initially said, this project does not use a real database. In its development, the in-memory database was used instead.
