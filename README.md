@@ -15,7 +15,7 @@ was not made and does not have many functionalities.
 
 ## Overview
 ### All Tasks
-![All]()
+![All](TodoApp/www/assets/All.png)
 
 ### Active Tasks
 ![All]()
