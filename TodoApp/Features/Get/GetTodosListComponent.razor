@@ -17,12 +17,17 @@
             <div class="todo-item">
                 <div class="checker">
                     <span class="">
-                        <input type="checkbox" title="Mark task as completed!" checked="@task.WasCompleted" @onclick="@(async () => await ChangeTaskStateAsync(task.Id))">
+                        <input type="checkbox" 
+                                title="Mark task as completed!" 
+                                checked="@task.WasCompleted" 
+                                @onclick="@(async () => await ChangeTaskStateAsync(task.Id))">
                     </span>
                 </div>
                 <span class="@task.ItemCssClass">@task.Title</span>
                 <div class="row float-end ">
-                    <span title="Delete Task" class="text-danger fa fa-trash-o"></span>
+                    <span title="Delete Task" 
+                            class="text-danger fa fa-trash-o" 
+                            @onclick="@(async () => await DeleteTaskAsync(task.Id))"></span>
                 </div>
             </div>
         }
