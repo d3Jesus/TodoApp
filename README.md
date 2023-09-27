@@ -15,7 +15,7 @@ was not made and does not have many functionalities.
 
 ## Overview
 ### All Tasks
-![All](https://github.com/d3Jesus/TodoApp/www/assets/All.png)
+![All](https://github.com/d3Jesus/TodoApp/wwwroot/assets/All.png)
 
 ### Active Tasks
 ![All]()
