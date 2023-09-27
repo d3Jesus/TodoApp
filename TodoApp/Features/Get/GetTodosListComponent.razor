@@ -1,0 +1,31 @@
+﻿
+@* <ul class="nav nav-pills todo-nav">
+    <li role="presentation" title="Display all tasks." class="nav-item all-task active"><a href="#" class="nav-link">All</a></li>
+    <li role="presentation" title="Display active tasks only." class="nav-item active-task"><a href="#" class="nav-link">Active</a></li>
+    <li role="presentation" title="Display completed tasks only." class="nav-item completed-task"><a href="#" class="nav-link">Completed</a></li>
+</ul> *@
+
+<div class="todo-list">
+    @if (tasks is null)
+    {
+        <h4> No tasks found !</h4>
+    }
+    else
+    {
+        foreach(var task in tasks)
+        {
+            <div class="todo-item">
+                <div class="checker"><span class=""><input type="checkbox" title="Mark task as completed!"></span></div>
+                <span>@task.Title</span>
+                <div class="row float-end ">
+                    <div class="col-6">
+                        <span title="Update Task" class="text-info fa fa-pencil"></span>
+                    </div>
+                    <div class="col-6">
+                        <span title="Delete Task" class="text-danger fa fa-trash-o"></span>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
